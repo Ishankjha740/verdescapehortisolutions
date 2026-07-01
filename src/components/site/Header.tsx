@@ -39,7 +39,9 @@ export function SiteHeader() {
             <Link
               key={item.to}
               to={item.to}
-              className="px-3 py-2 text-sm font-medium text-[var(--forest-deep)]/80 hover:text-[var(--leaf)] transition-colors"
+              className={`px-3 py-2 text-sm font-medium hover:text-[var(--leaf)] transition-colors ${
+                scrolled ? "text-[var(--forest-deep)]/80" : "text-[var(--cream)]/90"
+              }`}
               activeProps={{ className: "px-3 py-2 text-sm font-semibold text-[var(--leaf)]" }}
             >
               {item.label}
@@ -49,13 +51,21 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <Link
             to="/contact"
-            className="hidden sm:inline-flex items-center gap-2 rounded-full bg-[var(--forest-deep)] px-5 py-2.5 text-sm font-semibold text-[var(--cream)] hover:bg-[var(--leaf)] hover:text-[var(--forest-deep)] transition-colors shadow-[var(--shadow-soft)]"
+            className={`hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors shadow-[var(--shadow-soft)] ${
+              scrolled
+                ? "bg-[var(--forest-deep)] text-[var(--cream)] hover:bg-[var(--leaf)] hover:text-[var(--forest-deep)]"
+                : "bg-[var(--leaf)] text-[var(--forest-deep)] hover:bg-[var(--cream)]"
+            }`}
           >
             Request Consultation <ArrowUpRight className="h-4 w-4" />
           </Link>
           <button
             onClick={() => setOpen((v) => !v)}
-            className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--cream)]/80"
+            className={`lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors ${
+              scrolled
+                ? "border-[var(--border)] bg-[var(--cream)]/80 text-[var(--forest-deep)]"
+                : "border-white/20 bg-white/10 text-[var(--cream)]"
+            }`}
             aria-label="Toggle menu"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
