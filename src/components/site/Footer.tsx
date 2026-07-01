@@ -65,8 +65,8 @@ export function SiteFooter() {
             <h4 className="text-sm font-semibold text-[var(--cream)] mb-4">Get in touch</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3"><MapPin className="h-4 w-4 mt-0.5 text-[var(--leaf)]" /> Kokapet, Hyderabad 500089, India</li>
-              <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-[var(--leaf)]" /> +91 80 4567 8900</li>
-              <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-[var(--leaf)]" /> hello@verdescape.in</li>
+              <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-[var(--leaf)]" /> +91 99594 23300</li>
+              <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-[var(--leaf)]" /> info@verdescapehortisolutions.com</li>
             </ul>
             <div className="mt-6 flex gap-3">
               {[
