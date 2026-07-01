@@ -282,7 +282,7 @@ function Industries() {
               transition={{ duration: 0.5, delay: i * 0.04 }}
               className="group relative overflow-hidden rounded-2xl aspect-[4/5]"
             >
-              <img src={ind.img} alt={ind.label} loading="lazy" width={800} height={1000} className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src={ind.img} alt={`${ind.label} landscape project`} loading="lazy" width={800} height={1000} className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--forest-deep)] via-[var(--forest-deep)]/30 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <div className="text-sm font-semibold">{ind.label}</div>

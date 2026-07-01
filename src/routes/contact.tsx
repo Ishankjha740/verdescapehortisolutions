@@ -8,7 +8,11 @@ export const Route = createFileRoute("/contact")({
     meta: [
       { title: "Contact — Book a landscape consultation with VerdeScape" },
       { name: "description", content: "Talk to VerdeScape about your landscape design, execution or maintenance project. Studio in Bengaluru serving all South India." },
+      { property: "og:title", content: "Contact VerdeScape — Book a landscape consultation" },
+      { property: "og:description", content: "Reach the VerdeScape team for landscape design, execution and maintenance projects across South India." },
+      { property: "og:url", content: "https://verdescapehortisolutions.lovable.app/contact" },
     ],
+    links: [{ rel: "canonical", href: "https://verdescapehortisolutions.lovable.app/contact" }],
   }),
   component: ContactPage,
 });
@@ -43,8 +47,8 @@ function ContactPage() {
                     <Field label="Phone" name="phone" type="tel" />
                   </div>
                   <div>
-                    <label className="text-xs font-semibold uppercase tracking-widest text-[var(--forest-deep)]">Project type</label>
-                    <select required className="mt-2 w-full rounded-xl border border-[var(--border)] bg-[var(--card)] px-4 py-3 text-sm focus:outline-none focus:border-[var(--leaf)]">
+                    <label htmlFor="project-type" className="text-xs font-semibold uppercase tracking-widest text-[var(--forest-deep)]">Project type</label>
+                    <select id="project-type" name="projectType" required aria-label="Project type" className="mt-2 w-full rounded-xl border border-[var(--border)] bg-[var(--card)] px-4 py-3 text-sm focus:outline-none focus:border-[var(--leaf)]">
                       <option>Landscape Design</option>
                       <option>Landscape Execution</option>
                       <option>Maintenance</option>
@@ -53,8 +57,8 @@ function ContactPage() {
                     </select>
                   </div>
                   <div>
-                    <label className="text-xs font-semibold uppercase tracking-widest text-[var(--forest-deep)]">Tell us about the site & brief</label>
-                    <textarea required rows={5} className="mt-2 w-full rounded-xl border border-[var(--border)] bg-[var(--card)] px-4 py-3 text-sm focus:outline-none focus:border-[var(--leaf)]" />
+                    <label htmlFor="project-brief" className="text-xs font-semibold uppercase tracking-widest text-[var(--forest-deep)]">Tell us about the site & brief</label>
+                    <textarea id="project-brief" name="brief" required rows={5} className="mt-2 w-full rounded-xl border border-[var(--border)] bg-[var(--card)] px-4 py-3 text-sm focus:outline-none focus:border-[var(--leaf)]" />
                   </div>
                   <button className="rounded-full bg-[var(--forest-deep)] text-[var(--cream)] px-7 py-4 text-sm font-semibold hover:bg-[var(--leaf)] hover:text-[var(--forest-deep)] transition">
                     Request Consultation
