@@ -51,7 +51,6 @@ export function SiteFooter() {
               {[
                 ["/sustainability", "Sustainability"],
                 ["/insights", "Insights"],
-                ["/careers", "Careers"],
                 ["/contact", "Contact"],
               ].map(([to, l]) => (
                 <li key={to}>
