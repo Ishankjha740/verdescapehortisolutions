@@ -8,9 +8,11 @@ export const Route = createFileRoute("/services")({
     meta: [
       { title: "Services — VerdeScape Landscape & Horticulture" },
       { name: "description", content: "Landscape design, execution, project management, maintenance, horticulture consultancy and institutional advisory — under one roof." },
-      { property: "og:title", content: "VerdeScape Services" },
-      { property: "og:description", content: "Integrated horticulture services across design, build and maintain." },
+      { property: "og:title", content: "Services — VerdeScape Landscape & Horticulture" },
+      { property: "og:description", content: "Integrated horticulture services across design, build and maintain — under one accountable team." },
+      { property: "og:url", content: "https://verdescapehortisolutions.lovable.app/services" },
     ],
+    links: [{ rel: "canonical", href: "https://verdescapehortisolutions.lovable.app/services" }],
   }),
   component: ServicesPage,
 });
@@ -46,7 +48,7 @@ function ServicesPage() {
               </div>
               <div className="md:col-span-6">
                 <div className="text-[10px] font-mono text-[var(--leaf)]">0{i + 1}</div>
-                <h3 className="mt-1 text-2xl md:text-3xl font-extrabold text-[var(--forest-deep)]">{s.title}</h3>
+                <h2 className="mt-1 text-2xl md:text-3xl font-extrabold text-[var(--forest-deep)]">{s.title}</h2>
                 <p className="mt-3 text-[var(--muted-foreground)] max-w-xl">{s.desc}</p>
                 <Link to="/contact" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[var(--forest-deep)] group-hover:text-[var(--leaf)]">Discuss this service <ArrowUpRight className="h-4 w-4" /></Link>
               </div>

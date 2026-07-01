@@ -10,7 +10,11 @@ export const Route = createFileRoute("/sustainability")({
     meta: [
       { title: "Sustainability — VerdeScape Horti Solutions" },
       { name: "description", content: "Native palettes, water-smart irrigation, low-lifecycle carbon. How VerdeScape designs and maintains landscapes that give more than they take." },
+      { property: "og:title", content: "Sustainability — Landscapes that give more than they take" },
+      { property: "og:description", content: "Native palettes, water-smart irrigation and lifecycle thinking behind every VerdeScape landscape." },
+      { property: "og:url", content: "https://verdescapehortisolutions.lovable.app/sustainability" },
     ],
+    links: [{ rel: "canonical", href: "https://verdescapehortisolutions.lovable.app/sustainability" }],
   }),
   component: SustainabilityPage,
 });

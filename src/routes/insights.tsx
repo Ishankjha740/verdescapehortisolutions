@@ -14,7 +14,11 @@ export const Route = createFileRoute("/insights")({
     meta: [
       { title: "Insights — Landscape and horticulture articles by VerdeScape" },
       { name: "description", content: "Field notes on landscape trends, urban greenery, gardening, maintenance and sustainability." },
+      { property: "og:title", content: "Insights — Landscape & horticulture field notes" },
+      { property: "og:description", content: "Articles on landscape trends, urban greenery, plant science, maintenance and sustainability from the VerdeScape studio." },
+      { property: "og:url", content: "https://verdescapehortisolutions.lovable.app/insights" },
     ],
+    links: [{ rel: "canonical", href: "https://verdescapehortisolutions.lovable.app/insights" }],
   }),
   component: InsightsPage,
 });
@@ -48,7 +52,7 @@ function InsightsPage() {
               </div>
               <div className="p-7">
                 <div className="text-[10px] font-semibold tracking-[0.3em] uppercase text-[var(--leaf)]">{p.tag}</div>
-                <h3 className="mt-3 text-lg font-bold text-[var(--forest-deep)] leading-snug group-hover:text-[var(--leaf)] transition-colors">{p.title}</h3>
+                <h2 className="mt-3 text-lg font-bold text-[var(--forest-deep)] leading-snug group-hover:text-[var(--leaf)] transition-colors">{p.title}</h2>
                 <div className="mt-5 flex items-center justify-between text-xs text-[var(--muted-foreground)]">
                   <span>{p.read} read</span>
                   <ArrowUpRight className="h-4 w-4" />

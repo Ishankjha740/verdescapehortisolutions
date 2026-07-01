@@ -1,0 +1,16 @@
+# VerdeScape Horti Solutions
+
+> South India's integrated horticulture partner — 30+ years designing, building and maintaining sustainable landscapes for enterprises, institutions and homes.
+
+VerdeScape offers landscape design, execution, project management, maintenance, horticulture consultancy and institutional advisory across corporate, residential, healthcare, hospitality, education and government sectors.
+
+## Pages
+
+- [Home](/): Overview of VerdeScape's practice, services and featured projects.
+- [About](/about): Founder story, mission, vision and company timeline.
+- [Services](/services): Six integrated services from design to long-term maintenance.
+- [Industries](/industries): Sector-specific landscape solutions.
+- [Projects](/projects): Portfolio of built work across sectors and geographies.
+- [Sustainability](/sustainability): Water efficiency, native palettes and lifecycle thinking.
+- [Insights](/insights): Articles on landscape trends, plant science and maintenance.
+- [Contact](/contact): Book a consultation with the VerdeScape team.

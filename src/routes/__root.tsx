@@ -77,12 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "VerdeScape Horti Solutions — Premium Landscape & Horticulture" },
-      { name: "description", content: "South India's trusted integrated horticulture partner. 30+ years designing, executing, and maintaining sustainable landscapes for enterprises, institutions and homes." },
+      { title: "VerdeScape — Landscape & Horticulture Partner" },
+      { name: "description", content: "South India's integrated horticulture partner — 30+ years designing, building and maintaining sustainable landscapes for enterprises, institutions and homes." },
       { name: "author", content: "VerdeScape Horti Solutions" },
       { property: "og:title", content: "VerdeScape Horti Solutions" },
       { property: "og:description", content: "Transforming ideas into thriving green spaces through science, creativity, and execution." },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "VerdeScape Horti Solutions" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

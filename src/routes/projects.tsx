@@ -14,7 +14,11 @@ export const Route = createFileRoute("/projects")({
     meta: [
       { title: "Projects — Selected landscape work by VerdeScape" },
       { name: "description", content: "A portfolio of landscape design and execution across corporate, residential, hospitality, healthcare and institutional projects." },
+      { property: "og:title", content: "Projects — Selected landscape work by VerdeScape" },
+      { property: "og:description", content: "Portfolio of landscape design and execution across corporate, residential, hospitality, healthcare and institutional projects." },
+      { property: "og:url", content: "https://verdescapehortisolutions.lovable.app/projects" },
     ],
+    links: [{ rel: "canonical", href: "https://verdescapehortisolutions.lovable.app/projects" }],
   }),
   component: ProjectsPage,
 });
