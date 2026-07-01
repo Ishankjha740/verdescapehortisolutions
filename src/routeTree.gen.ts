@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SustainabilityRouteImport } from './routes/sustainability'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as InsightsRouteImport } from './routes/insights'
@@ -22,6 +23,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const SustainabilityRoute = SustainabilityRouteImport.update({
   id: '/sustainability',
   path: '/sustainability',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesRoute = ServicesRouteImport.update({
@@ -74,6 +80,7 @@ export interface FileRoutesByFullPath {
   '/insights': typeof InsightsRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sustainability': typeof SustainabilityRoute
 }
 export interface FileRoutesByTo {
@@ -85,6 +92,7 @@ export interface FileRoutesByTo {
   '/insights': typeof InsightsRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sustainability': typeof SustainabilityRoute
 }
 export interface FileRoutesById {
@@ -97,6 +105,7 @@ export interface FileRoutesById {
   '/insights': typeof InsightsRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sustainability': typeof SustainabilityRoute
 }
 export interface FileRouteTypes {
@@ -110,6 +119,7 @@ export interface FileRouteTypes {
     | '/insights'
     | '/projects'
     | '/services'
+    | '/sitemap.xml'
     | '/sustainability'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -121,6 +131,7 @@ export interface FileRouteTypes {
     | '/insights'
     | '/projects'
     | '/services'
+    | '/sitemap.xml'
     | '/sustainability'
   id:
     | '__root__'
@@ -132,6 +143,7 @@ export interface FileRouteTypes {
     | '/insights'
     | '/projects'
     | '/services'
+    | '/sitemap.xml'
     | '/sustainability'
   fileRoutesById: FileRoutesById
 }
@@ -144,6 +156,7 @@ export interface RootRouteChildren {
   InsightsRoute: typeof InsightsRoute
   ProjectsRoute: typeof ProjectsRoute
   ServicesRoute: typeof ServicesRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SustainabilityRoute: typeof SustainabilityRoute
 }
 
@@ -154,6 +167,13 @@ declare module '@tanstack/react-router' {
       path: '/sustainability'
       fullPath: '/sustainability'
       preLoaderRoute: typeof SustainabilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services': {
@@ -224,6 +244,7 @@ const rootRouteChildren: RootRouteChildren = {
   InsightsRoute: InsightsRoute,
   ProjectsRoute: ProjectsRoute,
   ServicesRoute: ServicesRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SustainabilityRoute: SustainabilityRoute,
 }
 export const routeTree = rootRouteImport
