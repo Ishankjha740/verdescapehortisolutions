@@ -16,7 +16,7 @@ Only the latest `main` branch receives security updates.
 Report privately using one of these channels:
 
 - Preferred: [GitHub Private Vulnerability Reporting](https://github.com/) — open the repo's **Security** tab → **Report a vulnerability**.
-- Email: **security@verdescape.example** (PGP available on request).
+- Email: **it.securities@verdescapehortisolutions.com** (PGP available on request).
 
 Please include:
 
