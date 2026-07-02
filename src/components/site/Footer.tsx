@@ -1,8 +1,11 @@
 import { Link } from "@tanstack/react-router";
+import { useState } from "react";
 import { Mail, Phone, MapPin, ArrowRight, Camera, Briefcase, Share2 } from "lucide-react";
 import { Logo } from "./Logo";
 
 export function SiteFooter() {
+  const [subEmail, setSubEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
   return (
     <footer className="bg-[var(--forest-deep)] text-[var(--cream)]/85 pt-24 pb-10 relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.06] pointer-events-none bg-[radial-gradient(circle_at_20%_20%,var(--leaf)_0%,transparent_45%),radial-gradient(circle_at_80%_60%,var(--gold)_0%,transparent_40%)]" />
@@ -16,17 +19,33 @@ export function SiteFooter() {
               Transforming ideas into thriving green spaces through science,
               creativity, and 30+ years of horticulture execution across South India.
             </p>
-            <form className="mt-8 flex items-center gap-2 max-w-sm">
+            <form
+              className="mt-8 flex items-center gap-2 max-w-sm"
+              onSubmit={(e) => {
+                e.preventDefault();
+                if (!subEmail) return;
+                const subject = "Newsletter signup — VerdeScape";
+                const body = `Please add this address to the VerdeScape newsletter:\n\n${subEmail}`;
+                window.location.href = `mailto:info@verdescapehortisolutions.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                setSubscribed(true);
+                setSubEmail("");
+              }}
+            >
               <input
                 type="email"
                 required
+                value={subEmail}
+                onChange={(e) => setSubEmail(e.target.value)}
                 placeholder="Your work email"
                 className="flex-1 rounded-full bg-white/10 border border-white/15 px-5 py-3 text-sm text-[var(--cream)] placeholder:text-[var(--cream)]/50 focus:outline-none focus:border-[var(--leaf)]"
               />
-              <button className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[var(--leaf)] text-[var(--forest-deep)] hover:scale-105 transition" aria-label="Subscribe">
+              <button type="submit" className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[var(--leaf)] text-[var(--forest-deep)] hover:scale-105 transition" aria-label="Subscribe">
                 <ArrowRight className="h-4 w-4" />
               </button>
             </form>
+            {subscribed && (
+              <p className="mt-3 text-xs text-[var(--leaf)]">Thanks — your email client will open to confirm your subscription.</p>
+            )}
           </div>
 
           <div className="lg:col-span-2">
