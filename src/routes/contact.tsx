@@ -13,6 +13,29 @@ export const Route = createFileRoute("/contact")({
       { property: "og:url", content: "https://verdescapehortisolutions.lovable.app/contact" },
     ],
     links: [{ rel: "canonical", href: "https://verdescapehortisolutions.lovable.app/contact" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "VerdeScape Horti Solutions",
+          image: "https://verdescapehortisolutions.lovable.app/favicon.ico",
+          url: "https://verdescapehortisolutions.lovable.app/contact",
+          telephone: "+91-99594-23300",
+          email: "info@verdescapehortisolutions.com",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Kokapet",
+            addressLocality: "Hyderabad",
+            postalCode: "500089",
+            addressCountry: "IN",
+          },
+          openingHours: "Mo-Sa 09:30-18:30",
+          areaServed: "South India",
+        }),
+      },
+    ],
   }),
   component: ContactPage,
 });
