@@ -617,10 +617,10 @@ function CTABand() {
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-[var(--forest-deep)] text-[var(--cream)] px-7 py-4 text-sm font-semibold hover:bg-black transition">
                 Book Consultation <ArrowUpRight className="h-4 w-4" />
               </Link>
-              <a href="tel:+918045678900" className="inline-flex items-center gap-2 rounded-full bg-[var(--forest-deep)]/10 text-[var(--forest-deep)] border border-[var(--forest-deep)]/20 px-7 py-4 text-sm font-semibold hover:bg-[var(--forest-deep)]/20 transition">
+              <a href="tel:+919959423300" className="inline-flex items-center gap-2 rounded-full bg-[var(--forest-deep)]/10 text-[var(--forest-deep)] border border-[var(--forest-deep)]/20 px-7 py-4 text-sm font-semibold hover:bg-[var(--forest-deep)]/20 transition">
                 <Phone className="h-4 w-4" /> Talk to an Expert
               </a>
-              <a href="https://wa.me/918045678900" className="inline-flex items-center gap-2 rounded-full bg-[var(--gold)] text-[var(--forest-deep)] px-7 py-4 text-sm font-semibold hover:brightness-95 transition">
+              <a href="https://wa.me/919959423300" className="inline-flex items-center gap-2 rounded-full bg-[var(--gold)] text-[var(--forest-deep)] px-7 py-4 text-sm font-semibold hover:brightness-95 transition">
                 <MessageCircle className="h-4 w-4" /> WhatsApp
               </a>
             </div>
