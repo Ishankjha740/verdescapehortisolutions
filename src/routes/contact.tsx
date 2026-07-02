@@ -7,7 +7,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Book a landscape consultation with VerdeScape" },
-      { name: "description", content: "Talk to VerdeScape about your landscape design, execution or maintenance project. Studio in Bengaluru serving all South India." },
+      { name: "description", content: "Talk to VerdeScape about your landscape design, execution or maintenance project. Studio in Hyderabad serving all South India." },
       { property: "og:title", content: "Contact VerdeScape — Book a landscape consultation" },
       { property: "og:description", content: "Reach the VerdeScape team for landscape design, execution and maintenance projects across South India." },
       { property: "og:url", content: "https://verdescapehortisolutions.lovable.app/contact" },
@@ -37,6 +37,20 @@ function ContactPage() {
                   className="space-y-5"
                   onSubmit={(e) => {
                     e.preventDefault();
+                    const fd = new FormData(e.currentTarget);
+                    const get = (k: string) => String(fd.get(k) ?? "").trim();
+                    const subject = `Consultation request — ${get("name") || "VerdeScape site"}`;
+                    const body = [
+                      `Name: ${get("name")}`,
+                      `Organisation: ${get("org")}`,
+                      `Email: ${get("email")}`,
+                      `Phone: ${get("phone")}`,
+                      `Project type: ${get("projectType")}`,
+                      "",
+                      "Brief:",
+                      get("brief"),
+                    ].join("\n");
+                    window.location.href = `mailto:info@verdescapehortisolutions.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                     setSent(true);
                   }}
                 >
@@ -69,17 +83,17 @@ function ContactPage() {
           </div>
 
           <div className="lg:col-span-5 space-y-5">
-            <InfoCard icon={MapPin} title="Studio" body="Design Studio, HSR Layout, Bengaluru 560102, Karnataka" />
-            <InfoCard icon={Phone} title="Call" body="+91 80 4567 8900" href="tel:+918045678900" />
-            <InfoCard icon={Mail} title="Email" body="hello@verdescape.in" href="mailto:hello@verdescape.in" />
-            <InfoCard icon={MessageCircle} title="WhatsApp" body="Chat with our team" href="https://wa.me/918045678900" />
+            <InfoCard icon={MapPin} title="Studio" body="Kokapet, Hyderabad 500089, India" />
+            <InfoCard icon={Phone} title="Call" body="+91 99594 23300" href="tel:+919959423300" />
+            <InfoCard icon={Mail} title="Email" body="info@verdescapehortisolutions.com" href="mailto:info@verdescapehortisolutions.com" />
+            <InfoCard icon={MessageCircle} title="WhatsApp" body="Chat with our team" href="https://wa.me/919959423300" />
             <InfoCard icon={Clock} title="Hours" body="Mon–Sat · 9:30 AM – 6:30 PM IST" />
 
             <div className="rounded-3xl overflow-hidden border border-[var(--border)] aspect-video">
               <iframe
                 title="Studio location"
                 className="w-full h-full"
-                src="https://www.google.com/maps?q=HSR+Layout+Bengaluru&output=embed"
+                src="https://www.google.com/maps?q=Kokapet+Hyderabad+500089&output=embed"
                 loading="lazy"
               />
             </div>
