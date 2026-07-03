@@ -32,7 +32,7 @@ export function SiteHeader() {
       }`}
     >
       <div className="container-x flex items-center justify-between gap-6">
-        <Logo variant={scrolled ? "dark" : "dark"} />
+        <Logo variant={scrolled ? "dark" : "light"} />
         <nav className="hidden lg:flex items-center gap-1">
           {NAV.map((item) => (
             <Link
