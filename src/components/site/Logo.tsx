@@ -14,23 +14,17 @@ export function Logo({
   variant?: "dark" | "light";
   className?: string;
 }) {
-  const isLight = variant === "light";
+  void variant;
   return (
     <Link
       to="/"
       aria-label="VerdeScape Horti Solutions"
-      className={`inline-flex items-center group transition-all duration-300 ${
-        isLight
-          ? "rounded-full bg-[color-mix(in_oklab,var(--cream)_92%,transparent)] backdrop-blur-md px-3 py-1.5 shadow-[var(--shadow-soft)] ring-1 ring-white/40"
-          : ""
-      } ${className}`}
+      className={`inline-flex items-center group ${className}`}
     >
       <img
         src={logoAsset.url}
         alt="VerdeScape Horti Solutions"
-        className={`w-auto object-contain transition-all duration-300 ${
-          isLight ? "h-8" : "h-10"
-        } group-hover:scale-[1.03]`}
+        className="h-10 w-auto object-contain"
         loading="eager"
         decoding="async"
       />
