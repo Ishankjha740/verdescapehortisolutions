@@ -24,7 +24,7 @@ export function Logo({
       <img
         src={logoAsset.url}
         alt="VerdeScape Horti Solutions"
-        className="h-10 w-auto object-contain"
+        className="h-16 md:h-20 w-auto object-contain"
         loading="eager"
         decoding="async"
       />
