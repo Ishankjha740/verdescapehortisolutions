@@ -128,10 +128,11 @@ function ContactPage() {
 }
 
 function Field({ label, name, type = "text" }: { label: string; name: string; type?: string }) {
+  const id = `field-${name}`;
   return (
     <div>
-      <label className="text-xs font-semibold uppercase tracking-widest text-[var(--forest-deep)]">{label}</label>
-      <input name={name} type={type} required className="mt-2 w-full rounded-xl border border-[var(--border)] bg-[var(--card)] px-4 py-3 text-sm focus:outline-none focus:border-[var(--leaf)]" />
+      <label htmlFor={id} className="text-xs font-semibold uppercase tracking-widest text-[var(--forest-deep)]">{label}</label>
+      <input id={id} name={name} type={type} required className="mt-2 w-full rounded-xl border border-[var(--border)] bg-[var(--card)] px-4 py-3 text-sm focus:outline-none focus:border-[var(--leaf)]" />
     </div>
   );
 }

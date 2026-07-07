@@ -6,8 +6,8 @@ const CANONICAL = "https://verdescapehortisolutions.lovable.app/guides/sustainab
 export const Route = createFileRoute("/guides/sustainable-landscapes")({
   head: () => ({
     meta: [
-      { title: "How to Create Sustainable Landscapes in South India — VerdeScape Guide" },
-      { name: "description", content: "A practical guide to creating sustainable landscapes in South India — native plant selection, drip irrigation and water conservation, and building living soils for the region's climate zones." },
+      { title: "Sustainable Landscapes in South India — VerdeScape" },
+      { name: "description", content: "Native plant palettes, drip irrigation and soil health — a practitioner's guide to sustainable landscapes for South India." },
       { property: "og:title", content: "How to Create Sustainable Landscapes in South India" },
       { property: "og:description", content: "Native palettes, water-smart irrigation and soil health — a practitioner's guide to sustainable landscapes for South Indian climate zones." },
       { property: "og:type", content: "article" },
