@@ -27,11 +27,11 @@ export function SiteHeader() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[color-mix(in_oklab,var(--cream)_88%,transparent)] backdrop-blur-xl border-b border-[var(--border)] py-3"
-          : "bg-transparent py-5"
+          ? "bg-[color-mix(in_oklab,var(--cream)_88%,transparent)] backdrop-blur-xl border-b border-[var(--border)] py-2 md:py-3"
+          : "bg-transparent py-3 md:py-5"
       }`}
     >
-      <div className="container-x flex items-center justify-between gap-6">
+      <div className="container-x flex items-center justify-between gap-3 md:gap-6">
         <Logo variant={scrolled ? "dark" : "light"} />
         <nav className="hidden lg:flex items-center gap-1">
           {NAV.map((item) => (
@@ -50,13 +50,15 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <Link
             to="/contact"
-            className={`hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors shadow-[var(--shadow-soft)] ${
+            className={`hidden md:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors shadow-[var(--shadow-soft)] ${
               scrolled
                 ? "bg-[var(--forest-deep)] text-[var(--cream)] hover:bg-[var(--leaf)] hover:text-[var(--forest-deep)]"
                 : "bg-[var(--leaf)] text-[var(--forest-deep)] hover:bg-[var(--cream)]"
             }`}
           >
-            Request Consultation <ArrowUpRight className="h-4 w-4" />
+            <span className="hidden lg:inline">Request Consultation</span>
+            <span className="lg:hidden">Contact</span>
+            <ArrowUpRight className="h-4 w-4" />
           </Link>
           <button
             onClick={() => setOpen((v) => !v)}
