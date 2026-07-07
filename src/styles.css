@@ -92,7 +92,8 @@
   --secondary: oklch(0.95 0.01 130);
   --secondary-foreground: var(--forest-deep);
   --muted: oklch(0.95 0.005 90);
-  --muted-foreground: oklch(0.45 0.02 160);
+  /* Darkened for WCAG AA (>=4.5:1) against --cream body background. */
+  --muted-foreground: oklch(0.36 0.02 160);
   --accent: var(--leaf);
   --accent-foreground: var(--forest-deep);
   --destructive: oklch(0.6 0.22 25);
