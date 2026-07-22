@@ -39,7 +39,7 @@ function AboutPage() {
       <PageHero
         eyebrow="About"
         title="Green spaces built on 30 years of practice."
-        subtitle="VerdeScape is a South India-based integrated horticulture and landscape practice. We combine research, design, execution and long-term care under a single accountable team."
+        subtitle="VerdeScape is an India-based integrated horticulture and landscape practice. We combine research, design, execution and long-term care under a single accountable team."
       />
 
       <section className="py-24 md:py-32">
