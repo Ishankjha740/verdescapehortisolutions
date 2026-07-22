@@ -26,7 +26,10 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Landscape design, execution and maintenance for enterprises, institutions and homes across India." },
       { property: "og:url", content: "https://verdescapehortisolutions.lovable.app/" },
     ],
-    links: [{ rel: "canonical", href: "https://verdescapehortisolutions.lovable.app/" }],
+    links: [
+      { rel: "canonical", href: "https://verdescapehortisolutions.lovable.app/" },
+      { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" },
+    ],
   }),
   component: Home,
 });
