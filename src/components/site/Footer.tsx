@@ -103,8 +103,8 @@ export function SiteFooter() {
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-[var(--cream)]/60">
           <p>© {new Date().getFullYear()} VerdeScape Horti Solutions. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-[var(--leaf)]">Privacy Policy</a>
-            <a href="#" className="hover:text-[var(--leaf)]">Terms of Service</a>
+            <Link to="/privacy" className="hover:text-[var(--leaf)]">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-[var(--leaf)]">Terms of Service</Link>
           </div>
         </div>
       </div>
