@@ -71,7 +71,7 @@ function ServicesPage() {
           <div className="rounded-[2rem] bg-[var(--forest-deep)] text-[var(--cream)] p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-extrabold">Ready for a scoping call?</h2>
-              <p className="mt-3 text-[var(--cream)]/70 max-w-xl">Share your site, brief and objectives. We'll send a first perspective within 3 business days.</p>
+              <p className="mt-3 text-[var(--cream)]/90 max-w-xl">Share your site, brief and objectives. We'll send a first perspective within 3 business days.</p>
             </div>
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-[var(--leaf)] text-[var(--forest-deep)] px-7 py-4 text-sm font-semibold">Start a project <ArrowRight className="h-4 w-4" /></Link>
           </div>
