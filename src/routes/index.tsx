@@ -81,7 +81,7 @@ function Hero() {
           className="max-w-4xl"
         >
           <div className="inline-flex items-center gap-2 rounded-full glass-dark px-4 py-2 text-xs font-medium tracking-wider uppercase text-[var(--leaf-soft)]">
-            <Sparkles className="h-3.5 w-3.5" /> 30 years · South India's integrated horticulture partner
+            <Sparkles className="h-3.5 w-3.5" /> 30 YEARS · INDIA'S INTEGRATED HORTICULTURE PARTNER
           </div>
           <h1 className="mt-6 text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold leading-[0.98] tracking-tight">
             Building sustainable
