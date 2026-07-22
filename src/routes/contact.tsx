@@ -7,9 +7,9 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Book a landscape consultation with VerdeScape" },
-      { name: "description", content: "Talk to VerdeScape about your landscape design, execution or maintenance project. Studio in Hyderabad serving all South India." },
+      { name: "description", content: "Talk to VerdeScape about your landscape design, execution or maintenance project. Studio in Hyderabad serving all India." },
       { property: "og:title", content: "Contact VerdeScape — Book a landscape consultation" },
-      { property: "og:description", content: "Reach the VerdeScape team for landscape design, execution and maintenance projects across South India." },
+      { property: "og:description", content: "Reach the VerdeScape team for landscape design, execution and maintenance projects across India." },
       { property: "og:url", content: "https://verdescapehortisolutions.lovable.app/contact" },
     ],
     links: [{ rel: "canonical", href: "https://verdescapehortisolutions.lovable.app/contact" }],
