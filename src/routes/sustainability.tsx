@@ -59,7 +59,7 @@ function SustainabilityPage() {
               <motion.div key={p.t} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }} className="rounded-3xl glass-dark p-8">
                 <div className="h-11 w-11 rounded-xl bg-[var(--leaf)] text-[var(--forest-deep)] flex items-center justify-center"><p.icon className="h-5 w-5" /></div>
                 <h3 className="mt-5 text-xl font-bold text-[var(--cream)]">{p.t}</h3>
-                <p className="mt-3 text-sm text-[var(--cream)]/70">{p.d}</p>
+                <p className="mt-3 text-sm text-[var(--cream)]/90">{p.d}</p>
               </motion.div>
             ))}
           </div>
