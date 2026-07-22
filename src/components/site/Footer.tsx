@@ -37,7 +37,7 @@ export function SiteFooter() {
                 value={subEmail}
                 onChange={(e) => setSubEmail(e.target.value)}
                 placeholder="Your work email"
-                className="flex-1 rounded-full bg-white/10 border border-white/15 px-5 py-3 text-sm text-[var(--cream)] placeholder:text-[var(--cream)]/50 focus:outline-none focus:border-[var(--leaf)]"
+                className="flex-1 rounded-full bg-white/10 border border-white/15 px-5 py-3 text-sm text-[var(--cream)] placeholder:text-[var(--cream)]/80 focus:outline-none focus:border-[var(--leaf)]"
               />
               <button type="submit" className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[var(--leaf)] text-[var(--forest-deep)] hover:scale-105 transition" aria-label="Subscribe">
                 <ArrowRight className="h-4 w-4" />
@@ -100,7 +100,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-[var(--cream)]/60">
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-[var(--cream)]/80">
           <p>© {new Date().getFullYear()} VerdeScape Horti Solutions. All rights reserved.</p>
           <div className="flex gap-6">
             <Link to="/privacy" className="hover:text-[var(--leaf)]">Privacy Policy</Link>
