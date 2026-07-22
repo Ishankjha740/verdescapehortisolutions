@@ -20,10 +20,10 @@ import leavesImg from "@/assets/texture-leaves.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "VerdeScape — Landscape & Horticulture Partner in South India" },
-      { name: "description", content: "VerdeScape designs, builds and maintains sustainable landscapes across South India — 30+ years of integrated horticulture practice." },
+      { title: "VerdeScape — Landscape & Horticulture Partner in India" },
+      { name: "description", content: "VerdeScape designs, builds and maintains sustainable landscapes across India — 30+ years of integrated horticulture practice." },
       { property: "og:title", content: "VerdeScape — Integrated Horticulture & Landscapes" },
-      { property: "og:description", content: "Landscape design, execution and maintenance for enterprises, institutions and homes across South India." },
+      { property: "og:description", content: "Landscape design, execution and maintenance for enterprises, institutions and homes across India." },
       { property: "og:url", content: "https://verdescapehortisolutions.lovable.app/" },
     ],
     links: [{ rel: "canonical", href: "https://verdescapehortisolutions.lovable.app/" }],

@@ -109,8 +109,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           name: "VerdeScape Horti Solutions",
           url: "https://verdescapehortisolutions.lovable.app",
           logo: "https://verdescapehortisolutions.lovable.app/favicon.ico",
-          description: "South India's integrated horticulture partner — landscape design, execution and maintenance.",
-          areaServed: "South India",
+          description: "India's integrated horticulture partner — landscape design, execution and maintenance.",
+          areaServed: "India",
         }),
       },
       {
