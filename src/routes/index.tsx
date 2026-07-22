@@ -127,13 +127,13 @@ function Hero() {
           ].map((s) => (
             <div key={s.l} className="bg-transparent p-6 md:p-7">
               <div className="text-3xl md:text-4xl font-extrabold text-[var(--leaf)]">{s.n}</div>
-              <div className="mt-1 text-xs md:text-sm text-[var(--cream)]/70 tracking-wide">{s.l}</div>
+              <div className="mt-1 text-xs md:text-sm text-[var(--cream)]/90 tracking-wide">{s.l}</div>
             </div>
           ))}
         </motion.div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 right-6 hidden md:flex flex-col items-center gap-2 text-[10px] tracking-[0.3em] uppercase text-[var(--cream)]/60">
+        <div className="absolute bottom-8 right-6 hidden md:flex flex-col items-center gap-2 text-[10px] tracking-[0.3em] uppercase text-[var(--cream)]/85">
           Scroll
           <ChevronDown className="h-4 w-4 animate-bounce" />
         </div>
@@ -177,7 +177,7 @@ function AboutPreview() {
           </div>
           <div className="absolute -bottom-8 -right-4 md:-right-8 rounded-2xl bg-[var(--forest-deep)] text-[var(--cream)] p-6 md:p-8 shadow-[var(--shadow-elegant)] max-w-[260px]">
             <div className="text-5xl font-extrabold text-[var(--leaf)]">30+</div>
-            <div className="mt-1 text-sm text-[var(--cream)]/70">Years of horticulture research, design and execution.</div>
+            <div className="mt-1 text-sm text-[var(--cream)]/90">Years of horticulture research, design and execution.</div>
           </div>
         </motion.div>
         <motion.div {...fadeUp} className="lg:col-span-6 lg:pl-8">
@@ -544,7 +544,7 @@ function Testimonials() {
           </motion.blockquote>
           <div className="mt-8 text-sm">
             <div className="font-semibold text-[var(--leaf)]">{t.name}</div>
-            <div className="text-[var(--cream)]/60">{t.role}</div>
+            <div className="text-[var(--cream)]/85">{t.role}</div>
           </div>
           <div className="mt-10 flex justify-center gap-2">
             {TESTIMONIALS.map((_, k) => (
