@@ -32,7 +32,7 @@ export const Route = createFileRoute("/contact")({
             addressCountry: "IN",
           },
           openingHours: "Mo-Sa 09:30-18:30",
-          areaServed: "South India",
+          areaServed: "India",
         }),
       },
     ],

@@ -310,7 +310,7 @@ function Industries() {
 
 /* ---------- WHY ---------- */
 const WHY = [
-  { t: "30+ years expertise", d: "Three decades of horticulture depth across South Indian climate zones." },
+  { t: "30+ years expertise", d: "Three decades of horticulture depth across Indian climate zones." },
   { t: "Research-driven", d: "In-house botany team validates every species and soil decision." },
   { t: "Customer-first", d: "Consultative process aligned to your architecture, budget and goals." },
   { t: "Sustainable by default", d: "Native palettes, water-smart irrigation, low-lifecycle carbon." },
@@ -561,7 +561,7 @@ function Testimonials() {
 
 /* ---------- INSIGHTS ---------- */
 const POSTS = [
-  { tag: "Sustainability", title: "Native planting palettes for South Indian workplaces", read: "6 min read", img: sustainabilityImg },
+  { tag: "Sustainability", title: "Native planting palettes for Indian workplaces", read: "6 min read", img: sustainabilityImg },
   { tag: "Urban Greenery", title: "Vertical gardens: what actually thrives on Bengaluru facades", read: "8 min read", img: corporateImg },
   { tag: "Maintenance", title: "The 12-month care calendar for premium residential estates", read: "5 min read", img: residentialImg },
 ];
