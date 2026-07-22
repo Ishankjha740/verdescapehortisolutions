@@ -75,7 +75,7 @@ function AboutPage() {
             <div>
               <h3 className="text-sm font-semibold text-[var(--leaf)] uppercase tracking-[0.3em]">Vision</h3>
               <p className="mt-3 text-2xl font-[Manrope] font-bold text-[var(--forest-deep)] leading-snug">
-                A greener South India — one institution, workplace and home at a time.
+                A greener India — one institution, workplace and home at a time.
               </p>
             </div>
           </div>
