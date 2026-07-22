@@ -8,7 +8,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About VerdeScape — 30 years of horticulture practice" },
-      { name: "description", content: "Founder story, mission, vision and the team behind VerdeScape's integrated horticulture practice across South India." },
+      { name: "description", content: "Founder story, mission, vision and the team behind VerdeScape's integrated horticulture practice across India." },
       { property: "og:title", content: "About VerdeScape" },
       { property: "og:description", content: "30+ years of horticulture research, design and execution." },
       { property: "og:url", content: "https://verdescapehortisolutions.lovable.app/about" },
@@ -30,7 +30,7 @@ const TIMELINE = [
   ["2003", "Expanded into integrated landscape design & build."],
   ["2011", "Opened dedicated maintenance division for institutional clients."],
   ["2018", "Launched sustainability practice with in-house botany research."],
-  ["2024", "500th major project delivered across South India."],
+  ["2024", "500th major project delivered across India."],
 ];
 
 function AboutPage() {
@@ -39,7 +39,7 @@ function AboutPage() {
       <PageHero
         eyebrow="About"
         title="Green spaces built on 30 years of practice."
-        subtitle="VerdeScape is a South India-based integrated horticulture and landscape practice. We combine research, design, execution and long-term care under a single accountable team."
+        subtitle="VerdeScape is an India-based integrated horticulture and landscape practice. We combine research, design, execution and long-term care under a single accountable team."
       />
 
       <section className="py-24 md:py-32">
@@ -75,7 +75,7 @@ function AboutPage() {
             <div>
               <h3 className="text-sm font-semibold text-[var(--leaf)] uppercase tracking-[0.3em]">Vision</h3>
               <p className="mt-3 text-2xl font-[Manrope] font-bold text-[var(--forest-deep)] leading-snug">
-                A greener South India — one institution, workplace and home at a time.
+                A greener India — one institution, workplace and home at a time.
               </p>
             </div>
           </div>

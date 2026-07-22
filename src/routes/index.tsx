@@ -20,10 +20,10 @@ import leavesImg from "@/assets/texture-leaves.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "VerdeScape — Landscape & Horticulture Partner in South India" },
-      { name: "description", content: "VerdeScape designs, builds and maintains sustainable landscapes across South India — 30+ years of integrated horticulture practice." },
+      { title: "VerdeScape — Landscape & Horticulture Partner in India" },
+      { name: "description", content: "VerdeScape designs, builds and maintains sustainable landscapes across India — 30+ years of integrated horticulture practice." },
       { property: "og:title", content: "VerdeScape — Integrated Horticulture & Landscapes" },
-      { property: "og:description", content: "Landscape design, execution and maintenance for enterprises, institutions and homes across South India." },
+      { property: "og:description", content: "Landscape design, execution and maintenance for enterprises, institutions and homes across India." },
       { property: "og:url", content: "https://verdescapehortisolutions.lovable.app/" },
     ],
     links: [{ rel: "canonical", href: "https://verdescapehortisolutions.lovable.app/" }],
@@ -81,7 +81,7 @@ function Hero() {
           className="max-w-4xl"
         >
           <div className="inline-flex items-center gap-2 rounded-full glass-dark px-4 py-2 text-xs font-medium tracking-wider uppercase text-[var(--leaf-soft)]">
-            <Sparkles className="h-3.5 w-3.5" /> 30 years · South India's integrated horticulture partner
+            <Sparkles className="h-3.5 w-3.5" /> 30 YEARS · INDIA'S INTEGRATED HORTICULTURE PARTNER
           </div>
           <h1 className="mt-6 text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold leading-[0.98] tracking-tight">
             Building sustainable
@@ -183,7 +183,7 @@ function AboutPreview() {
             A one-stop horticulture partner — from concept to canopy.
           </h2>
           <p className="mt-6 text-[var(--muted-foreground)] leading-relaxed">
-            Since 1994, VerdeScape has helped architects, developers and institutions
+            Since 2024, VerdeScape has helped architects, developers and institutions
             translate ambitious ideas into living, breathing landscapes. Our integrated
             teams handle research, design, execution and long-term maintenance under one roof.
           </p>
@@ -197,7 +197,7 @@ function AboutPreview() {
             <div>
               <h3 className="text-sm font-semibold text-[var(--forest-deep)] uppercase tracking-wider">Vision</h3>
               <p className="mt-2 text-sm text-[var(--muted-foreground)]">
-                A greener South India — one institution, workplace and home at a time.
+                A greener India — one institution, workplace and home at a time.
               </p>
             </div>
           </div>
@@ -310,7 +310,7 @@ function Industries() {
 
 /* ---------- WHY ---------- */
 const WHY = [
-  { t: "30+ years expertise", d: "Three decades of horticulture depth across South Indian climate zones." },
+  { t: "30+ years expertise", d: "Three decades of horticulture depth across Indian climate zones." },
   { t: "Research-driven", d: "In-house botany team validates every species and soil decision." },
   { t: "Customer-first", d: "Consultative process aligned to your architecture, budget and goals." },
   { t: "Sustainable by default", d: "Native palettes, water-smart irrigation, low-lifecycle carbon." },
@@ -561,7 +561,7 @@ function Testimonials() {
 
 /* ---------- INSIGHTS ---------- */
 const POSTS = [
-  { tag: "Sustainability", title: "Native planting palettes for South Indian workplaces", read: "6 min read", img: sustainabilityImg },
+  { tag: "Sustainability", title: "Native planting palettes for Indian workplaces", read: "6 min read", img: sustainabilityImg },
   { tag: "Urban Greenery", title: "Vertical gardens: what actually thrives on Bengaluru facades", read: "8 min read", img: corporateImg },
   { tag: "Maintenance", title: "The 12-month care calendar for premium residential estates", read: "5 min read", img: residentialImg },
 ];

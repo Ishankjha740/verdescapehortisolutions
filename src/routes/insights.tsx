@@ -24,7 +24,7 @@ export const Route = createFileRoute("/insights")({
 });
 
 const POSTS = [
-  { tag: "Sustainability", title: "Native planting palettes for South Indian workplaces", read: "6 min", img: sustainabilityImg },
+  { tag: "Sustainability", title: "Native planting palettes for Indian workplaces", read: "6 min", img: sustainabilityImg },
   { tag: "Urban Greenery", title: "Vertical gardens: what actually thrives on Bengaluru facades", read: "8 min", img: corporateImg },
   { tag: "Maintenance", title: "The 12-month care calendar for premium residential estates", read: "5 min", img: residentialImg },
   { tag: "Trends", title: "Why healing gardens are the fastest-growing hospital investment", read: "7 min", img: healthcareImg },
