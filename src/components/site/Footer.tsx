@@ -17,7 +17,7 @@ export function SiteFooter() {
             </div>
             <p className="mt-5 text-sm leading-relaxed max-w-sm">
               Transforming ideas into thriving green spaces through science,
-              creativity, and 30+ years of horticulture execution across South India.
+              creativity, and 30+ years of horticulture execution across India.
             </p>
             <form
               className="mt-8 flex items-center gap-2 max-w-sm"
