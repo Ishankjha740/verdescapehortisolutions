@@ -30,7 +30,7 @@ const TIMELINE = [
   ["2003", "Expanded into integrated landscape design & build."],
   ["2011", "Opened dedicated maintenance division for institutional clients."],
   ["2018", "Launched sustainability practice with in-house botany research."],
-  ["2024", "500th major project delivered across South India."],
+  ["2024", "500th major project delivered across India."],
 ];
 
 function AboutPage() {
