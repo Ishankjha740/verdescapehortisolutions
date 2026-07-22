@@ -80,6 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "VerdeScape — Landscape & Horticulture Partner" },
       { name: "description", content: "India's integrated horticulture partner — 30+ years designing and maintaining sustainable landscapes." },
       { name: "author", content: "VerdeScape Horti Solutions" },
+      { name: "google-site-verification", content: "pgc2HF7GIQuTuVEI3TI7J1iYhRdCOn9R86t-9IlcF88" },
       { property: "og:title", content: "VerdeScape — Landscape & Horticulture Partner" },
       { property: "og:description", content: "India's integrated horticulture partner — 30+ years designing and maintaining sustainable landscapes." },
       { property: "og:type", content: "website" },
