@@ -197,7 +197,7 @@ function AboutPreview() {
             <div>
               <h3 className="text-sm font-semibold text-[var(--forest-deep)] uppercase tracking-wider">Vision</h3>
               <p className="mt-2 text-sm text-[var(--muted-foreground)]">
-                A greener South India — one institution, workplace and home at a time.
+                A greener India — one institution, workplace and home at a time.
               </p>
             </div>
           </div>
