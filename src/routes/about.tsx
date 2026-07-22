@@ -8,7 +8,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About VerdeScape — 30 years of horticulture practice" },
-      { name: "description", content: "Founder story, mission, vision and the team behind VerdeScape's integrated horticulture practice across South India." },
+      { name: "description", content: "Founder story, mission, vision and the team behind VerdeScape's integrated horticulture practice across India." },
       { property: "og:title", content: "About VerdeScape" },
       { property: "og:description", content: "30+ years of horticulture research, design and execution." },
       { property: "og:url", content: "https://verdescapehortisolutions.lovable.app/about" },
