@@ -102,9 +102,11 @@ export function SiteFooter() {
 
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-[var(--cream)]/80">
           <p>© {new Date().getFullYear()} VerdeScape Horti Solutions. All rights reserved.</p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-6">
             <Link to="/privacy" className="hover:text-[var(--leaf)]">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-[var(--leaf)]">Terms of Service</Link>
+            <a href="/sitemap.xml" className="hover:text-[var(--leaf)]">Sitemap</a>
+            <Link to="/license" className="hover:text-[var(--leaf)]">License</Link>
           </div>
         </div>
       </div>
