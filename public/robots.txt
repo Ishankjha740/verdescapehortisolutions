@@ -1,4 +1,71 @@
+# ==========================================================
+# robots.txt
+# VerdeScape Horti Solutions
+# https://verdescapehortisolutions.lovable.app
+# ==========================================================
+
+# Allow all search engines
 User-agent: *
 Allow: /
 
+# Block internal/system routes if they exist
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /_internal/
+Disallow: /private/
+
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Crawl optimization
+Crawl-delay: 2
+
+# Sitemap
 Sitemap: https://verdescapehortisolutions.lovable.app/sitemap.xml
