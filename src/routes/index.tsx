@@ -186,7 +186,7 @@ function AboutPreview() {
             A one-stop horticulture partner — from concept to canopy.
           </h2>
           <p className="mt-6 text-[var(--muted-foreground)] leading-relaxed">
-            Since 1994, VerdeScape has helped architects, developers and institutions
+            Since 2024, VerdeScape has helped architects, developers and institutions
             translate ambitious ideas into living, breathing landscapes. Our integrated
             teams handle research, design, execution and long-term maintenance under one roof.
           </p>
@@ -416,7 +416,7 @@ function FeaturedProjects() {
 
 /* ---------- PROCESS ---------- */
 const STEPS = [
-  "Consultation", "Site Visit", "Planning", "Design", "Execution", "Maintenance", "Long-term Partnership",
+  "Consultation", "Site Visit", "Planning", "Design", "Execution", "Maintenance", "Long-/short-term Partnership",
 ];
 
 function Process() {
