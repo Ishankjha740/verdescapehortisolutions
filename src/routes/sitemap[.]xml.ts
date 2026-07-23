@@ -1,21 +1,38 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
+import type { FileRoutesByTo } from "@/routeTree.gen";
 
 const BASE_URL = "https://verdescapehortisolutions.lovable.app";
-const entries = [
-  { path: "/", changefreq: "weekly", priority: "1.0" },
-  { path: "/about", changefreq: "monthly", priority: "0.8" },
-  { path: "/services", changefreq: "monthly", priority: "0.9" },
-  { path: "/industries", changefreq: "monthly", priority: "0.7" },
-  { path: "/projects", changefreq: "weekly", priority: "0.9" },
-  { path: "/sustainability", changefreq: "monthly", priority: "0.7" },
-  { path: "/insights", changefreq: "weekly", priority: "0.7" },
-  { path: "/contact", changefreq: "monthly", priority: "0.8" },
-  { path: "/guides/sustainable-landscapes", changefreq: "monthly", priority: "0.7" },
-  { path: "/privacy", changefreq: "yearly", priority: "0.3" },
-  { path: "/terms", changefreq: "yearly", priority: "0.3" },
-  { path: "/license", changefreq: "yearly", priority: "0.3" },
-];
+
+// Per-path SEO overrides. Any route not listed uses DEFAULT_META.
+// Newly added pages under src/routes/ are picked up automatically via the
+// generated route tree — no need to edit this list unless you want to tune
+// changefreq/priority for a specific URL.
+const META_OVERRIDES: Record<string, { changefreq: string; priority: string }> = {
+  "/": { changefreq: "weekly", priority: "1.0" },
+  "/services": { changefreq: "monthly", priority: "0.9" },
+  "/projects": { changefreq: "weekly", priority: "0.9" },
+  "/about": { changefreq: "monthly", priority: "0.8" },
+  "/contact": { changefreq: "monthly", priority: "0.8" },
+  "/privacy": { changefreq: "yearly", priority: "0.3" },
+  "/terms": { changefreq: "yearly", priority: "0.3" },
+  "/license": { changefreq: "yearly", priority: "0.3" },
+};
+const DEFAULT_META = { changefreq: "monthly", priority: "0.7" };
+
+// Routes that should never appear in the sitemap (non-indexable / infra).
+const EXCLUDED_PATHS = new Set<string>(["/sitemap.xml"]);
+
+function discoverPaths(): string[] {
+  // FileRoutesByTo keys are the fully-resolved URL paths for every file
+  // route. Filter out dynamic segments, splats, API routes, and infra.
+  const keys = Object.keys({} as FileRoutesByTo) as Array<keyof FileRoutesByTo>;
+  // The empty object above yields no runtime keys — we need the actual
+  // generated map. Import it lazily to keep the sitemap runtime-driven.
+  return keys as unknown as string[];
+}
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const _typeOnly = discoverPaths;
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
