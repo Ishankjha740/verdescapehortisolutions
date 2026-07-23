@@ -57,15 +57,19 @@ export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
-        const urls = entries.map((e) =>
+        const paths = discoverPaths();
+        const urls = paths.map((path) => {
+          const meta = META_OVERRIDES[path] ?? DEFAULT_META;
+          return (
           [
             `  <url>`,
-            `    <loc>${BASE_URL}${e.path}</loc>`,
-            `    <changefreq>${e.changefreq}</changefreq>`,
-            `    <priority>${e.priority}</priority>`,
+            `    <loc>${BASE_URL}${path}</loc>`,
+            `    <changefreq>${meta.changefreq}</changefreq>`,
+            `    <priority>${meta.priority}</priority>`,
             `  </url>`,
-          ].join("\n"),
-        );
+          ].join("\n")
+          );
+        });
         const xml = [
           `<?xml version="1.0" encoding="UTF-8"?>`,
           `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`,
