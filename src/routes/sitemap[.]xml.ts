@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
-import type { FileRoutesByTo } from "@/routeTree.gen";
+import { routeTree } from "@/routeTree.gen";
 
 const BASE_URL = "https://verdescapehortisolutions.lovable.app";
 
@@ -23,16 +23,35 @@ const DEFAULT_META = { changefreq: "monthly", priority: "0.7" };
 // Routes that should never appear in the sitemap (non-indexable / infra).
 const EXCLUDED_PATHS = new Set<string>(["/sitemap.xml"]);
 
+// Walk the generated route tree and collect every concrete, indexable URL.
+// Skips: dynamic ($param) and splat ($) segments, API routes, the sitemap
+// itself, and any not-found / layout-only nodes.
 function discoverPaths(): string[] {
-  // FileRoutesByTo keys are the fully-resolved URL paths for every file
-  // route. Filter out dynamic segments, splats, API routes, and infra.
-  const keys = Object.keys({} as FileRoutesByTo) as Array<keyof FileRoutesByTo>;
-  // The empty object above yields no runtime keys — we need the actual
-  // generated map. Import it lazily to keep the sitemap runtime-driven.
-  return keys as unknown as string[];
+  const found = new Set<string>();
+  const visit = (node: unknown) => {
+    if (!node || typeof node !== "object") return;
+    const n = node as { fullPath?: string; children?: Record<string, unknown> | unknown[] };
+    const p = n.fullPath;
+    if (
+      typeof p === "string" &&
+      p.length > 0 &&
+      !p.includes("$") &&
+      !p.startsWith("/api/") &&
+      !EXCLUDED_PATHS.has(p)
+    ) {
+      // Normalize trailing slash on non-root paths
+      const norm = p.length > 1 && p.endsWith("/") ? p.slice(0, -1) : p;
+      found.add(norm);
+    }
+    const children = n.children;
+    if (children) {
+      const list = Array.isArray(children) ? children : Object.values(children);
+      for (const c of list) visit(c);
+    }
+  };
+  visit(routeTree);
+  return Array.from(found).sort((a, b) => (a === "/" ? -1 : b === "/" ? 1 : a.localeCompare(b)));
 }
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const _typeOnly = discoverPaths;
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
